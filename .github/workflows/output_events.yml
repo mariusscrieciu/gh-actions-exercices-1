@@ -1,5 +1,11 @@
 name: Handle issues
-on: issues
+on:
+  pull_request:
+    types:
+      - opened
+      - edited
+  workflow_dispatch:
+
 jobs:
   output-info:
     runs-on: ubuntu-latest
